@@ -1,0 +1,33 @@
+{
+  "name": "meteora-tx-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP server that builds unsigned Meteora DLMM transactions for a wallet to sign.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "meteora-tx-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@meteora-ag/dlmm": "1.9.14",
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "@solana/web3.js": "^1.99.0",
+    "bn.js": "^5.2.1",
+    "dotenv": "^18.0.5",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.5",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
